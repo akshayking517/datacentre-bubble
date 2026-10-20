@@ -1,8 +1,8 @@
 # Datacentre Bubble
 
-Interactive simulation: Can the house answer its own devices quietly?
+Interactive simulation: **AI Rack Power Allocation — Arithmetic Versus Moving Weights**
 
-Compares traditional Von Neumann/GPU architectures (weights hauled on every token) versus Compute-in-Memory (weights stay in place) for a silent home AI box.
+Shows where power goes during model inference: the actual arithmetic versus the cost of moving weights across wires (off-chip memory vs stationary on-chip weights). Highlights the impact on rack power, cooling requirements, and CapEx.
 
 ## View the simulation
 
@@ -21,7 +21,7 @@ https://akshayking517.github.io/datacentre-bubble/
 https://htmlpreview.github.io/?https://github.com/akshayking517/datacentre-bubble/blob/main/index.html
 
 ## How it works
-- Switch between Standard Chip (GPU) and In-Memory Chip modes
-- Slide or click presets for model sizes from 80M to 100B
-- Watch power draw, surface temperature, wire traffic, and fan risk
-- Run a 1,000-day weather simulation
+- Toggle between **Off-chip memory** (hauling weights) and **Stationary weights** (kept on-chip)
+- Select model size (8B / 70B / 405B) and concurrent user streams (100–4,000)
+- See total rack power, breakdown of math vs wire movement vs cooling, and whether air or liquid cooling is required
+- Instant cost comparison ($12k air vs $115k liquid cooling)
